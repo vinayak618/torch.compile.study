@@ -32,10 +32,7 @@ def onnxrt(gm, example_inputs):
 @torch.compile(backend="onnxrt")
 def my_function_compiled(x):
     print(f"In my_function - Input type: {type(x)}")
-    print(
-        f"In my_function - Input shape: {x.shape if isinstance(x, torch.Tensor) \
-                                         else 'Not a tensor'}"
-    )
+    print(f"In my_function - Input shape: {x.shape if isinstance(x, torch.Tensor) else 'Not a tensor'}")
     print(f"In my_function - Input content: {x}")
     if isinstance(x, list):
         print(f"List contents: {[type(item) for item in x]}")
@@ -75,9 +72,7 @@ for shape in [(10,), (3, 4), (2, 3, 4)]:
         print(f"Result shape: {compiled_result.shape}")
 
         print("\nVerification:")
-        are_close, max_diff = verify_results(
-            my_function_compiled, my_function_original, input_tensor
-        )
+        are_close, max_diff = verify_results(my_function_compiled, my_function_original, input_tensor)
 
         if not are_close:
             print("Warning: Results are not close enough!")
