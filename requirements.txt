@@ -3,6 +3,7 @@ torchvision==0.15.2+cpu
 torchaudio==2.0.2+cpu
 --find-links https://download.pytorch.org/whl/torch_stable.html
 
+matplotlib
 onnx
 onnxruntime
 ruff
