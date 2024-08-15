@@ -1,0 +1,13 @@
+[tool.ruff]
+line-length = 100
+extend-select = ["E402", "E501"]
+fix = true
+unsafe-fixes = true
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+line-ending = "auto"
