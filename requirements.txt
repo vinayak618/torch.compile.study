@@ -7,3 +7,4 @@ onnx
 onnxruntime
 ruff
 pre-commit
+pytest
